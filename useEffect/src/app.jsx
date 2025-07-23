@@ -1,14 +1,28 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+
 import "./app.css";
 
-function App() {
+export function App() {
   const [width, setWidth] = useState();
+  useEffect(() => {
+    const handleResize = () => {
+      setWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  });
 
   return (
     <>
       <div>
         <h1>Window Width Tracker</h1>
-        <p>currenct width:-</p>
+        <p>
+          currenct width:- <strong>{width}px</strong>
+        </p>
       </div>
     </>
   );
