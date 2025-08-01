@@ -1,12 +1,44 @@
-# React + Vite
+⏱️ Project 57: Daily Task Tracker using React.js & Tailwind CSS  
+🔗 Live Demo: ()
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+📄 Description  
+A simple and efficient Daily Task Tracker built with React.js and Tailwind CSS. It helps users manage recurring daily tasks by checking them off and tracking time or notes per task. The app supports date selection and automatically saves data to your browser’s local storage for persistence.
 
-Currently, two official plugins are available:
+🔧 Technologies Used
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- React.js
+- Tailwind CSS
+- useState & useEffect Hooks
+- localStorage API
 
-## Expanding the ESLint configuration
+🌟 Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Track default daily tasks (e.g., Project Work, Interview Prep, etc.)
+- Mark tasks as complete/incomplete
+- Add time spent or notes per task
+- Select and view tasks for any date
+- Automatically save and load task data from local storage
+- Responsive and mobile-friendly interface
+
+🚀 Challenges Faced
+
+- Managing state across different dates
+- Persisting task data correctly using localStorage
+- Creating a clean, functional layout with Tailwind CSS
+
+🎯 Key Learnings
+
+- Leveraging React hooks (`useState`, `useEffect`) for interactivity
+- Using Tailwind CSS for rapid and responsive UI development
+- Managing per-day data efficiently with dynamic keys in localStorage
+
+📂 How to Run Locally
+
+1. Clone the repository
+
+```bash
+git clone https://github.com/your-username/daily-task-tracker.git
+cd daily-task-tracker
+npm i
+npm run dev
+```
