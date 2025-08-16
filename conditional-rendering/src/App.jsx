@@ -5,16 +5,23 @@ import "./App.css";
 
 function App() {
   const [count, setCount] = useState(0);
-  const [showBtn, setShowBtn] = useState(false);
+  const [showBtn, setShowBtn] = useState();
 
   return (
     <>
       <div>
-        {showBtn ? (
+        {/*<-------- Ternary Operator ---------->*/}
+        {/* condition ? True : Flase */}
+
+        {/* {showBtn ? (
           <button>I will be show only when second button is clicked</button>
         ) : (
           "Not show"
-        )}
+        )} */}
+
+        {/*Logical Operator */}
+
+        {showBtn && <button>Show button</button>}
         <h1>Condition Rendering</h1>
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
