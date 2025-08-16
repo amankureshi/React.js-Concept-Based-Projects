@@ -5,7 +5,7 @@ import "./App.css";
 
 function App() {
   const [count, setCount] = useState(0);
-  const [showBtn, setShowBtn] = useState();
+  const [showBtn, setShowBtn] = useState(false);
 
   return (
     <>
@@ -23,9 +23,7 @@ function App() {
 
         {showBtn && <button>Show button</button>}
         <h1>Condition Rendering</h1>
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
+        <button onClick={() => setShowBtn(!showBtn)}>count is {count}</button>
       </div>
     </>
   );
