@@ -11,19 +11,27 @@ function App() {
     <>
       <div>
         {/*<-------- Ternary Operator ---------->*/}
-        {/* condition ? True : Flase */}
 
+        {/* condition ? True : Flase */}
         {/* {showBtn ? (
           <button>I will be show only when second button is clicked</button>
         ) : (
           "Not show"
         )} */}
 
-        {/*Logical Operator */}
+        {/* When use If else than use this condition ------->*/}
+        {showBtn ? (
+          <button>showBtn is true</button>
+        ) : (
+          <button>showBtn is false</button>
+        )}
 
-        {showBtn && <button>Show button</button>}
+        {/*Logical Operator */}
+        {/* {showBtn && <button>Show button</button>} */}
         <h1>Condition Rendering</h1>
-        <button onClick={() => setShowBtn(!showBtn)}>count is {count}</button>
+        <button onClick={() => setShowBtn(!showBtn)}>
+          Toggle showBtn {count}
+        </button>
       </div>
     </>
   );
