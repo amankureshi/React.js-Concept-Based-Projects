@@ -2,6 +2,7 @@ import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
+import Todo from "./Components/Todo";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -29,6 +30,7 @@ function App() {
         {/*Logical Operator */}
         {/* {showBtn && <button>Show button</button>} */}
         <h1>Condition Rendering</h1>
+        <Todo />
         <button onClick={() => setShowBtn(!showBtn)}>
           Toggle showBtn {count}
         </button>
