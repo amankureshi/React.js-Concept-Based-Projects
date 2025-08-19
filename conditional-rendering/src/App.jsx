@@ -8,6 +8,21 @@ function App() {
   const [count, setCount] = useState(0);
   const [showBtn, setShowBtn] = useState(false);
 
+  const [todos, setTodos] = useState([
+    {
+      title: "First",
+      desc: "I am First",
+    },
+    {
+      title: "Second",
+      desc: "I am Second",
+    },
+    {
+      title: "Third",
+      desc: "I am Third",
+    },
+  ]);
+
   return (
     <>
       <div>
@@ -30,10 +45,13 @@ function App() {
         {/*Logical Operator */}
         {/* {showBtn && <button>Show button</button>} */}
         <h1>Condition Rendering</h1>
-        <Todo />
+
         <button onClick={() => setShowBtn(!showBtn)}>
           Toggle showBtn {count}
         </button>
+        {todos.map((todo) => {
+          return <Todo todo={todo} />;
+        })}
       </div>
     </>
   );
