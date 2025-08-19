@@ -49,9 +49,9 @@ function App() {
         <button onClick={() => setShowBtn(!showBtn)}>
           Toggle showBtn {count}
         </button>
-        {todos.map((todo) => {
-          return <Todo todo={todo} />;
-        })}
+        {todos.map((item, index) => (
+          <Todo key={index} todo={item} />
+        ))}
       </div>
     </>
   );
