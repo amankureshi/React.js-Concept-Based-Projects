@@ -1,24 +1,10 @@
 import React, { useState } from "react";
 
 const Todo = ({ todo }) => {
-  const [todos, setTodos] = useState([
-    {
-      title: "First",
-      desc: "I am First",
-    },
-    {
-      title: "Second",
-      desc: "I am Second",
-    },
-    {
-      title: "Third",
-      desc: "I am Third",
-    },
-  ]);
   return (
     <div className="todo">
-      {todo.title}
-      <div className="todo">{todo.desc}</div>
+      <h3>{todo.title}</h3>
+      <p>{todo.desc}</p>
     </div>
   );
 };
