@@ -10,8 +10,8 @@ export function App() {
     };
 
     window.addEventListener("resize", handleResize);
-    console.log(width);
 
+    console.log(width);
     return () => {
       window.removeEventListener("resize", handleResize);
     };
